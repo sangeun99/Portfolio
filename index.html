@@ -8,16 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Heebo:wght@400;700;900&family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>eom sangeun</title>
+  <script src="./skills.js"></script>
 </head>
-<script>
-  $(document).ready(function(){
-    var skillList = document.querySelectorAll(".skill-percentage-bar");
-    for (var value of skillList) {
-      var skillPercentage = value.textContent;
-      value.style.width = skillPercentage;
-    }
-  });
-</script>
 <body>
   <section class="profile">
     <img class="profile-img" src="./assets/img-profile.jpg" alt="">
