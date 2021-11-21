@@ -1,0 +1,421 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  color: #21243D;
+}
+
+/* Reset CSS */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button,
+textarea {
+	font-size: 16px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+	outline: none;
+	box-shadow: none;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  z-index: -1;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.section-name {
+  font-size: 18px;
+  line-height: 3.33333333;
+  text-align: center;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 23px;
+  text-align: center;
+}
+
+.profile-img {
+  display: block;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin-bottom: 34px;
+}
+
+.profile-title {
+  margin-bottom: 21px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.profile-desc {
+  margin-bottom: 27px;
+}
+
+.fill-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #B91646;
+  color: #FFF;
+  transition: opacity ease-in-out 300ms;
+}
+
+.fill-button:hover {
+  opacity: 0.5;
+}
+
+/* Education */
+.education {
+  background-color: #F7F6F2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-card {
+  width: 355px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: #FFF;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1),
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 4px 6px 0 rgba(0, 0, 0, 0.01);
+}
+
+.education-card h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 1.36363636;
+}
+
+.education-detail span::after {
+  content: '|';
+  padding: 0 23px;
+}
+
+.education-detail span:last-child::after {
+  content: '';
+  padding: 0;
+}
+
+/* Skills */
+.skills {
+  height: 300px;
+  padding: 0;
+}
+
+.skill-part {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.skill-part:last-child {
+  margin-bottom: 0;
+}
+
+.skill-language {
+  width: 70px;
+  font-size: 14px;
+}
+
+.skill-percentage {
+  display: block;
+  width: 280px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: #F7F6F2;
+}
+
+.skill-percentage-bar {
+  display: block;
+  max-width: 280px;
+  width: 0%;
+  height: 20px;
+  padding-right: 10px;
+  border-radius: 15px;
+  background-color: #105652;
+  font-size: 10px;
+  line-height: 2;
+  color: #fff;
+  text-align: right;
+}
+
+/* Project */
+.project {
+  padding-bottom: 50px;
+  background-color: #F7F6F2;
+}
+
+.project-card {
+  display: block;
+  width: 355px;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 0 auto 35px;
+  background-color: #FFF;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1),
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 4px 6px 0 rgba(0, 0, 0, 0.01);
+  transition: all ease-in-out 300ms;
+}
+
+.project-card:hover {
+  box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.3);
+  transform: translatey(-4px);
+}
+
+.project-card:last-child {
+  margin: 0 auto;
+}
+
+.project-title::before {
+  content: '';
+  display: block;
+  width: 315px;
+  height: 200px;
+  border-radius: 6px;
+  margin: 0 auto 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 315px auto;
+}
+
+.project-title.r-y-m::before {
+  background-image: url(./assets/img-project-rym.png);
+}
+
+.project-title.simple-pos::before {
+  background-size: cover;
+  background-image: url('./assets/img-project-simplepos.png');
+}
+
+.project-title {
+  margin-bottom: 17px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.project-desc {
+  margin-bottom: 24px;
+}
+
+.project-year {
+  display: inline-block;
+  width: 62px;
+  height: 25px;
+  margin-right: 20px;
+  border-radius: 16px;
+  font-weight: 900;
+  line-height: 1.5625;
+  color: #FFF;
+  text-align: center;
+  background-color: #142850;
+}
+
+.project-skill::after {
+  content: '|';
+  margin: 3px;
+}
+
+.project-skill:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+.project-skill {
+  color: #8695A4;
+}
+
+.project-summary {
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  padding: 80px 0;
+}
+
+.github-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  background-image: url('./assets/img-footer-github.png');
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: center;
+  transition: opacity ease-in-out 300ms;
+}
+
+.github-link:hover {
+  opacity: 0.5;
+}
+
+/* Desktop (>= 768px) */
+@media screen and (min-width: 768px) {
+  .section-name {
+    font-size: 22px;
+    line-height: 2.72727272;
+    text-align: left;
+  }
+
+  /* Profile */
+  .profile {
+    flex-direction: row-reverse;
+    width: 855px;
+    height: 600px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .profile-img {
+    width: 243px;
+    height: 243px;
+    margin-bottom: 0;
+  }
+
+  .profile div {
+    margin-right: 115px;
+  }
+
+  .profile-title {
+    margin-bottom: 40px;
+    font-size: 44px;
+    line-height: 1.36363636;
+  }
+
+  .profile-desc {
+    margin-bottom: 47px;
+  }
+
+  .fill-button {
+    margin: 0;
+  }
+
+  /* Education */
+  .container {
+    width: 855px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .education-card {
+    width: 418px;
+    padding: 46px 20px;
+  }
+
+  .education-card h3 {
+    margin-bottom: 17px;
+    font-size: 26px;
+    line-height: 1.46153846;
+  }
+
+  /* Skills */
+  .skills {
+    width: 855px;
+    margin: 0 auto;
+  }
+
+  .skill-part {
+    margin-bottom: 13px;
+  }
+
+  .skill-language {
+    width: 90px;
+    font-size: 18px;
+  }
+
+  .skill-percentage {
+    width: 480px;
+    height: 26px;
+  }
+
+  .skill-percentage-bar {
+    max-width: 480px;
+    height: 26px;
+    line-height: 2.6;
+  }
+
+  /* Project */
+  .project {
+    padding-bottom: 50px;
+    background-color: #F7F6F2;
+  }
+
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-card {
+    width: 410px;
+    padding: 30px;
+  }
+
+  .project-card:first-child {
+    margin: 0 30px 0 0;
+  }
+
+  .project-card:last-child {
+    margin: 0;
+  }
+
+  .project-title::before {
+    width: 350px;
+    height: 220px;
+    background-size: 350px auto;
+  }
+
+  .project-title {
+    font-size: 26px;
+  }
+}
